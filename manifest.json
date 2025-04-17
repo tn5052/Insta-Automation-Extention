@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Instagram Story Assistant",
+  "version": "1.0",
+  "description": "Manage and interact with Instagram stories for marketing visibility",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": ["https://*.instagram.com/*"],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "web_accessible_resources": [{
+    "resources": ["images/*", "fonts/*"],
+    "matches": ["https://*.instagram.com/*"]
+  }],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*.instagram.com/*"],
+      "js": ["content.js"],
+      "css": ["content-styles.css"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

@@ -1,0 +1,325 @@
+/* Content script specific styles with high specificity */
+.isa-btn {
+  background: white !important;
+  color: #262626 !important;
+  border: 1px solid #dbdbdb !important;
+  border-radius: 8px !important;
+  padding: 8px 12px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  margin: 0 8px 0 8px !important;
+  transition: background-color 0.2s ease !important;
+  height: 32px !important;
+  box-shadow: none !important;
+  min-width: 90px !important;
+}
+
+.isa-btn:hover {
+  background-color: #fafafa !important;
+}
+
+.isa-btn:active {
+  background-color: #f0f0f0 !important;
+}
+
+.isa-btn-icon {
+  width: 16px !important;
+  height: 16px !important;
+  fill: #262626 !important;
+  stroke: #262626 !important;
+}
+
+.isa-btn-text {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  white-space: nowrap !important;
+}
+
+.isa-btn-circle {
+  border-radius: 50% !important;
+  width: 32px !important;
+  height: 32px !important;
+  padding: 0 !important;
+}
+
+/* Toast notification styles */
+.isa-toast {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  background-color: white !important;
+  color: #262626 !important;
+  border-left: 4px solid #8a3ab9 !important;
+  padding: 12px 16px !important;
+  border-radius: 6px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  z-index: 9999 !important;
+  font-size: 14px !important;
+  max-width: 300px !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+  animation: isa-fade-in 0.3s ease-out !important;
+}
+
+@keyframes isa-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Modal styles */
+.isa-modal {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 9999 !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+}
+
+.isa-modal-content {
+  background-color: white !important;
+  border-radius: 12px !important;
+  width: 350px !important;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2) !important;
+  color: #262626 !important;
+  animation: isa-scale-in 0.2s ease-out !important;
+  overflow: hidden !important;
+}
+
+@keyframes isa-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.isa-modal-header {
+  padding: 18px 20px !important;
+  border-bottom: 1px solid #f0f0f0 !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+.isa-modal-header h3 {
+  margin: 0 !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  color: #262626 !important;
+}
+
+.isa-modal-close {
+  background: none !important;
+  border: none !important;
+  cursor: pointer !important;
+  color: #8e8e8e !important;
+  font-size: 24px !important;
+  line-height: 1 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 24px !important;
+  height: 24px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 50% !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.isa-modal-close:hover {
+  background-color: #f0f0f0 !important;
+}
+
+.isa-modal-body {
+  padding: 20px !important;
+}
+
+.isa-form-group {
+  margin-bottom: 20px !important;
+}
+
+.isa-form-group:last-child {
+  margin-bottom: 0 !important;
+}
+
+.isa-form-group label {
+  display: block !important;
+  margin-bottom: 8px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #262626 !important;
+}
+
+.isa-form-group select,
+.isa-form-group input[type="text"] {
+  width: 100% !important;
+  padding: 12px 16px !important;
+  border: 1px solid #dbdbdb !important;
+  border-radius: 6px !important;
+  background-color: #fafafa !important;
+  font-size: 14px !important;
+  color: #262626 !important;
+  transition: border-color 0.2s ease, background-color 0.2s ease !important;
+  box-sizing: border-box !important;
+}
+
+.isa-form-group select:hover,
+.isa-form-group input[type="text"]:hover {
+  border-color: #b2b2b2 !important;
+}
+
+.isa-form-group select:focus,
+.isa-form-group input[type="text"]:focus {
+  border-color: #8a3ab9 !important;
+  background-color: white !important;
+  outline: none !important;
+}
+
+/* Custom styled checkbox */
+.isa-checkbox {
+  display: flex !important;
+  align-items: center !important;
+  margin: 16px 0 !important;
+  cursor: pointer !important;
+  user-select: none !important;
+}
+
+.isa-checkbox input[type="checkbox"] {
+  position: absolute !important;
+  opacity: 0 !important;
+  cursor: pointer !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+.isa-checkbox-custom {
+  position: relative !important;
+  display: inline-block !important;
+  width: 18px !important;
+  height: 18px !important;
+  background-color: #fafafa !important;
+  border: 1px solid #dbdbdb !important;
+  border-radius: 4px !important;
+  margin-right: 10px !important;
+  transition: all 0.2s ease !important;
+}
+
+.isa-checkbox input[type="checkbox"]:checked ~ .isa-checkbox-custom {
+  background-color: #8a3ab9 !important;
+  border-color: #8a3ab9 !important;
+}
+
+.isa-checkbox input[type="checkbox"]:checked ~ .isa-checkbox-custom:after {
+  content: '' !important;
+  position: absolute !important;
+  display: block !important;
+  left: 6px !important;
+  top: 2px !important;
+  width: 5px !important;
+  height: 10px !important;
+  border: solid white !important;
+  border-width: 0 2px 2px 0 !important;
+  transform: rotate(45deg) !important;
+}
+
+.isa-checkbox input[type="checkbox"]:focus ~ .isa-checkbox-custom {
+  box-shadow: 0 0 0 3px rgba(138, 58, 185, 0.2) !important;
+}
+
+.isa-checkbox label {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #262626 !important;
+  cursor: pointer !important;
+}
+
+.isa-modal-footer {
+  padding: 16px 20px !important;
+  border-top: 1px solid #f0f0f0 !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+  gap: 12px !important;
+  background-color: #fafafa !important;
+}
+
+.isa-btn-secondary {
+  background: #f0f0f0 !important;
+  color: #262626 !important;
+  border: none !important;
+  border-radius: 6px !important;
+  padding: 10px 16px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  transition: background 0.2s ease !important;
+}
+
+.isa-btn-secondary:hover {
+  background: #e0e0e0 !important;
+}
+
+.isa-btn-primary {
+  background: linear-gradient(to right, #8a3ab9, #4c68d7) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 6px !important;
+  padding: 10px 20px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  cursor: pointer !important;
+  transition: opacity 0.2s ease !important;
+}
+
+.isa-btn-primary:hover {
+  opacity: 0.9 !important;
+}
+
+.isa-message {
+  text-align: center !important;
+  padding: 20px 0 !important;
+  color: #8e8e8e !important;
+  font-size: 14px !important;
+}
+
+.isa-error {
+  color: #ed4956 !important;
+  font-size: 13px !important;
+  margin-top: 8px !important;
+  background-color: rgba(237, 73, 86, 0.1) !important;
+  padding: 8px 12px !important;
+  border-radius: 4px !important;
+  border-left: 3px solid #ed4956 !important;
+}
+
+/* Create new list input animation */
+.isa-slide-down {
+  max-height: 0 !important;
+  overflow: hidden !important;
+  transition: max-height 0.3s ease-out !important;
+  margin-top: 0 !important;
+}
+
+.isa-slide-down.open {
+  max-height: 100px !important;
+  margin-top: 16px !important;
+}
